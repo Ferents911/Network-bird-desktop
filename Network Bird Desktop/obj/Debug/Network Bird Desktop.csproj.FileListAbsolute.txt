@@ -1,0 +1,27 @@
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Debug\Network Bird Desktop.exe.config
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Debug\Network Bird Desktop.exe
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Debug\Network Bird Desktop.pdb
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Debug\MaterialSkin.dll
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\obj\Debug\Network Bird Desktop.csprojResolveAssemblyReference.cache
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\obj\Debug\Network_Bird_Desktop.Properties.Resources.resources
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\obj\Debug\Network Bird Desktop.csproj.GenerateResource.Cache
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\obj\Debug\Network Bird Desktop.csproj.CoreCompileInputs.cache
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\obj\Debug\Network Bird Desktop.exe
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\obj\Debug\Network Bird Desktop.pdb
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\obj\Debug\Network_Bird_Desktop.NBmain.resources
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Debug\Bunifu_UI_v1.4.dll
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Debug\Mono.Security.dll
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Debug\OKHOSTING.Core.dll
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Debug\OKHOSTING.Core.Net4.dll
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Debug\OKHOSTING.Data.dll
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Debug\OKHOSTING.UI.dll
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Debug\OKHOSTING.UI.Net4.WinForms.dll
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Debug\PCLCrypto.dll
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Debug\Validation.dll
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Debug\OKHOSTING.Data.pdb
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Debug\OKHOSTING.UI.pdb
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Debug\OKHOSTING.UI.Net4.WinForms.pdb
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Debug\PCLCrypto.xml
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Debug\Validation.xml
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\obj\Debug\Network_Bird_Desktop.Settings.resources
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\obj\Debug\Network_Bird_Desktop.Registration.resources
