@@ -3,20 +3,8 @@ D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Rel
 D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Release\Network Bird Desktop.pdb
 D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Release\Bunifu_UI_v1.4.dll
 D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Release\MaterialSkin.dll
-D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Release\Mono.Security.dll
-D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Release\OKHOSTING.Core.dll
-D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Release\OKHOSTING.Core.Net4.dll
-D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Release\OKHOSTING.Data.dll
-D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Release\OKHOSTING.UI.dll
-D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Release\OKHOSTING.UI.Net4.WinForms.dll
-D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Release\PCLCrypto.dll
 D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Release\Validation.dll
-D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Release\OKHOSTING.Data.pdb
-D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Release\OKHOSTING.UI.pdb
-D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Release\OKHOSTING.UI.Net4.WinForms.pdb
-D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Release\PCLCrypto.xml
 D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Release\Validation.xml
-D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\obj\Release\Network Bird Desktop.csprojResolveAssemblyReference.cache
 D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\obj\Release\Network_Bird_Desktop.NBmain.resources
 D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\obj\Release\Network_Bird_Desktop.Properties.Resources.resources
 D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\obj\Release\Network_Bird_Desktop.Registration.resources
@@ -25,3 +13,15 @@ D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\obj\Rel
 D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\obj\Release\Network Bird Desktop.csproj.CoreCompileInputs.cache
 D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\obj\Release\Network Bird Desktop.exe
 D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\obj\Release\Network Bird Desktop.pdb
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Release\Network Bird Desktop.exe.manifest
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Release\Network Bird Desktop.application
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\obj\Release\Network Bird Desktop.exe.manifest
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\obj\Release\Network Bird Desktop.application
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\obj\Release\Network_Bird_Desktop.Restoration.resources
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Release\CookComputing.XmlRpcV3.dll
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Release\OpenXNet.dll
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Release\System.Xml.dll
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Release\OpenXNet.pdb
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Release\OpenXNet.xml
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\obj\Release\Network Bird Desktop.csprojAssemblyReference.cache
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\obj\Release\Network Bird Desktop.csproj.CopyComplete

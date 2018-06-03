@@ -252,6 +252,7 @@
             // materialLabel1
             // 
             this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.animator1.SetDecoration(this.materialLabel1, BunifuAnimatorNS.DecorationType.None);
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Nazanintar", 11F);
@@ -262,6 +263,7 @@
             this.materialLabel1.Size = new System.Drawing.Size(156, 23);
             this.materialLabel1.TabIndex = 15;
             this.materialLabel1.Text = "?Forgot  your  password";
+            this.materialLabel1.Click += new System.EventHandler(this.materialLabel1_Click);
             // 
             // materialDivider1
             // 

@@ -11,13 +11,17 @@ using MaterialSkin;
 using MaterialSkin.Controls;
 using System.Net;
 using System.Net.Sockets;
+using System.Data.OleDb;
+using System.IO;
 
 namespace Network_Bird_Desktop
 {
-    
-
+ 
+     
     public partial class NBmain : MaterialSkin.Controls.MaterialForm
     {
+        public string log;
+        string pass;
         Image img1 = Image.FromFile(@"D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\Resources\white_settings.png");
         bool alive = false; // будет ли работать поток для приема
         UdpClient client;
@@ -108,10 +112,53 @@ namespace Network_Bird_Desktop
         public void loginButton_Click_1(object sender, EventArgs e)
         {   
 
+        
+
+            using (var connection = new OleDbConnection("Provider=" + "Microsoft.Jet.OLEDB.4.0;Data Source=" + Directory.GetCurrentDirectory() + "\\Data\\data.mdb"))
+            {
+                connection.Open();
+                OleDbCommand command_1 = connection.CreateCommand();
+                OleDbCommand command_2 = connection.CreateCommand();
+
+                command_1.CommandText = "SELECT * FROM [Users] WHERE User_name = '" + userNameTextBox.Text + "';";
+                OleDbDataReader reader_1 = command_1.ExecuteReader();
+                command_2.CommandText = "SELECT * FROM [Users] WHERE User_pass = '" + PasswordTextBox.Text + "';";
+                OleDbDataReader reader_2 = command_2.ExecuteReader();
+                while (reader_1.Read())
+                {
+                    log = reader_1[0].ToString();
+
+                }
+                while (reader_2.Read())
+                {
+                    pass = reader_2[0].ToString();
+                }
+                if ((string.IsNullOrWhiteSpace(PasswordTextBox.Text)) || (string.IsNullOrWhiteSpace(userNameTextBox.Text)))
+                {
+                    MessageBox.Show("One or more fields is empty, please enter the data", "Network bird", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    if ((pass == null) || (log == null))
+                    {
+                        MessageBox.Show("Incorect login or password ", "Network bird", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        Enter();
+                    }
+                }
+                reader_1.Close();
+                reader_2.Close();
+            }
+
+        }
+
+        public void Enter()
+        {
             bunifuFlatButton3.Enabled = true;
             userName = userNameTextBox.Text;
             userNameTextBox.Enabled = false;
-
             try
             {
                 client = new UdpClient(LOCALPORT);
@@ -135,8 +182,7 @@ namespace Network_Bird_Desktop
             {
                 MessageBox.Show(ex.Message);
             }
-        
-    }
+        }
 
         private void sendButton_Click_1(object sender, EventArgs e)
         {
@@ -230,8 +276,14 @@ namespace Network_Bird_Desktop
 
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
-            bunifuFlatButton3.Enabled = false;
+            bunifuFlatButton3.Enabled = true;
             ExitChat();
+        }
+
+        private void materialLabel1_Click(object sender, EventArgs e)
+        {
+            Restoration res = new Restoration();
+            res.Show();
         }
     }
     }

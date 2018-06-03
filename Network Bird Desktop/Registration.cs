@@ -67,7 +67,14 @@ namespace Network_Bird_Desktop
                 }
                     else
                     {
-                    RegInit();
+                        if ((string.IsNullOrWhiteSpace(RegUN.Text)) || (string.IsNullOrWhiteSpace(RegMail.Text)) || (string.IsNullOrWhiteSpace(RegPass.Text)))
+                        {
+                        MessageBox.Show("One or more fields is empty, please enter the data", "Network bird", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                        RegInit();
+                        }
                     }
                 reader_1.Close();
                 reader_2.Close();
