@@ -12,9 +12,9 @@ using MaterialSkin.Controls;
 
 namespace Network_Bird_Desktop
 {
-    public partial class Settings : MaterialSkin.Controls.MaterialForm
+    public partial class About : MaterialSkin.Controls.MaterialForm
     {
-        public Settings()
+        public About()
         {
             MaterialSkinManager SM = MaterialSkinManager.Instance;
             SM.AddFormToManage(this);
@@ -24,11 +24,12 @@ namespace Network_Bird_Desktop
             MaximizeBox = false;
             MaximumSize = this.Size;
             MinimumSize = this.Size;
+            InitializeComponent();
         }
 
-        private void Settings_Load(object sender, EventArgs e)
+        private void About_Load(object sender, EventArgs e)
         {
-
+            label1.ForeColor = Color.FromArgb(25, 118, 210);
         }
     }
 }

@@ -8,7 +8,6 @@ D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Rel
 D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\obj\Release\Network_Bird_Desktop.NBmain.resources
 D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\obj\Release\Network_Bird_Desktop.Properties.Resources.resources
 D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\obj\Release\Network_Bird_Desktop.Registration.resources
-D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\obj\Release\Network_Bird_Desktop.Settings.resources
 D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\obj\Release\Network Bird Desktop.csproj.GenerateResource.Cache
 D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\obj\Release\Network Bird Desktop.csproj.CoreCompileInputs.cache
 D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\obj\Release\Network Bird Desktop.exe
@@ -25,3 +24,5 @@ D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Rel
 D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\bin\Release\OpenXNet.xml
 D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\obj\Release\Network Bird Desktop.csprojAssemblyReference.cache
 D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\obj\Release\Network Bird Desktop.csproj.CopyComplete
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\obj\Release\Network_Bird_Desktop.Settings_NB.resources
+D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\obj\Release\Network_Bird_Desktop.About.resources

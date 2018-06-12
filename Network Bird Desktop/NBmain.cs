@@ -13,13 +13,15 @@ using System.Net;
 using System.Net.Sockets;
 using System.Data.OleDb;
 using System.IO;
+using Network_Bird_Desktop.Properties;
 
 namespace Network_Bird_Desktop
 {
- 
-     
+
+
     public partial class NBmain : MaterialSkin.Controls.MaterialForm
     {
+        private Settings_NB sett;
         public string log;
         string pass;
         Image img1 = Image.FromFile(@"D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\Resources\white_settings.png");
@@ -104,6 +106,7 @@ namespace Network_Bird_Desktop
 
         private void NBmain_FormClosing(object sender, FormClosingEventArgs e)
         {
+           
             if (alive)
                 ExitChat();
             Application.Exit();
@@ -186,27 +189,32 @@ namespace Network_Bird_Desktop
 
         private void sendButton_Click_1(object sender, EventArgs e)
         {
-            try
-            {
-                string message = String.Format("{0}: {1}", userName, messageTextBox.Text);
-                byte[] data = Encoding.Unicode.GetBytes(message);
-                client.Send(data, data.Length, HOST, REMOTEPORT);
-                messageTextBox.Clear();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+           
+            
         }
 
         private void NBmain_Load(object sender, EventArgs e)
         {
+            sett = new Settings_NB();
             bunifuFlatButton3.Enabled = false;
             materialDivider1.BackColor = Color.FromArgb(25, 118, 210);
             materialDivider2.BackColor = Color.FromArgb(25, 118, 210);
             chatTextBox.Cursor = null;
             userNameTextBox.Hint = "Nickname";
             PasswordTextBox.Hint = "Password";
+            if (Properties.Settings.Default.lang_selector == "ukr")
+            {
+                materialCheckBox1.Text = "Запам'ятати мене";
+                loginButton.Text = "Вхід";
+                materialLabel1.Text = "?Забули пароль";
+                materialLabel2.Text = "!Зареєструватись зараз";
+                bunifuFlatButton1.ButtonText = "Налаштування";
+                bunifuFlatButton2.ButtonText = "Про";
+                bunifuFlatButton3.ButtonText = "Вийти";
+                
+            }
+           
+
         }
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
@@ -247,7 +255,7 @@ namespace Network_Bird_Desktop
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            Settings set = new Settings();
+            Settings_NB set = new Settings_NB();
             set.Show();
         }
 
@@ -264,9 +272,16 @@ namespace Network_Bird_Desktop
 
         private void bunifuFlatButton1_Click_2(object sender, EventArgs e)
         {
-            Settings set = new Settings();
-            set.Show();
+            if (Application.OpenForms.OfType<Settings_NB>().Count() == 1)
+                Application.OpenForms.OfType<Settings_NB>().First().Close();
+
+            Settings_NB frm = new Settings_NB();
+             frm.Show();
+
         }
+
+ 
+
 
         private void materialLabel2_Click(object sender, EventArgs e)
         {
@@ -285,5 +300,26 @@ namespace Network_Bird_Desktop
             Restoration res = new Restoration();
             res.Show();
         }
+
+        private void sendButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string message = String.Format("{0}: {1}", userName, messageTextBox.Text);
+                byte[] data = Encoding.Unicode.GetBytes(message);
+                client.Send(data, data.Length, HOST, REMOTEPORT);
+                messageTextBox.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void bunifuFlatButton2_Click_2(object sender, EventArgs e)
+        {
+            About ab = new About();
+            ab.Show();
+        }
     }
-    }
+ }

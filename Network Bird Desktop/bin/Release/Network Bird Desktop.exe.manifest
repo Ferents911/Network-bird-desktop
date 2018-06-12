@@ -79,14 +79,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Network Bird Desktop.exe" size="91568">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Network Bird Desktop.exe" size="160688">
       <assemblyIdentity name="Network Bird Desktop" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>TC1ka0U8EmdPnwapw2DXFcYEHjm+ESaFjkKhF7R85og=</dsig:DigestValue>
+        <dsig:DigestValue>QqbCntEjs79wuWbWNUbSEQXOZUlnycnEyDaZFNSr8As=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -141,13 +141,13 @@
       <dsig:DigestValue>unqyO0uetzDygRzP1CFPYKT5cEWyRUDapZtZpjgEaJg=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Network Bird Desktop.exe.config" size="768">
+  <file name="Network Bird Desktop.exe.config" size="1846">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>8kxl+V3WtpfnhXGzW0irq4JOta4BJ3FkmKjy8eHawHc=</dsig:DigestValue>
+      <dsig:DigestValue>Hh6RvonMBLRYmG+DAl0GCwTke/KypxBRcSJ/TT//GkY=</dsig:DigestValue>
     </hash>
   </file>
   <file name="xNet.dll" size="101888">

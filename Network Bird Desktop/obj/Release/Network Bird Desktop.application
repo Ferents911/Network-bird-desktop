@@ -7,14 +7,14 @@
     <framework targetVersion="4.7" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Network Bird Desktop.exe.manifest" size="8657">
+    <dependentAssembly dependencyType="install" codebase="Network Bird Desktop.exe.manifest" size="8659">
       <assemblyIdentity name="Network Bird Desktop.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>GJVca3t0SrMeRrf5bsyqrCnBar/Riu9OFXZ3DkYQCn0=</dsig:DigestValue>
+        <dsig:DigestValue>RW2XePxdm6f225S4E5uoFucP5zbPx6fg8i+uT0+lWt4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
