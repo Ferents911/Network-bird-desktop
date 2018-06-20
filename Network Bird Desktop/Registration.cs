@@ -37,6 +37,15 @@ namespace Network_Bird_Desktop
             RegPass.Hint = "Password";
             RegMail.Hint = "E-mail";
             materialDivider1.BackColor = Color.FromArgb(25, 118, 210);
+            if (Properties.Settings.Default.lang_selector == "ukr")
+            {
+
+                this.Text = "Реєстрація";
+                materialLabel1.Text = ":Ваш нікнейм в чаті";
+                materialLabel2.Text = ":Ваш пароль";
+                materialLabel3.Text = ":Ваша електронна пошта";
+                label1.Text = "!Реєстрація успішно завершена";
+            }
         }
 
         private void materialRaisedButton1_Click(object sender, EventArgs e)

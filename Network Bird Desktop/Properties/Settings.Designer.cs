@@ -70,5 +70,41 @@ namespace Network_Bird_Desktop.Properties {
                 this["curent_lang"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string pass {
+            get {
+                return ((string)(this["pass"]));
+            }
+            set {
+                this["pass"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string log {
+            get {
+                return ((string)(this["log"]));
+            }
+            set {
+                this["log"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string chk {
+            get {
+                return ((string)(this["chk"]));
+            }
+            set {
+                this["chk"] = value;
+            }
+        }
     }
 }

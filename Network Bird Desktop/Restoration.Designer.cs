@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Restoration));
             this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.RestoreTextBox = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.HostLabel = new System.Windows.Forms.Label();
@@ -39,15 +40,16 @@
             // materialRaisedButton1
             // 
             this.materialRaisedButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialRaisedButton1.Depth = 0;
             this.materialRaisedButton1.Icon = null;
-            this.materialRaisedButton1.Location = new System.Drawing.Point(255, 192);
+            this.materialRaisedButton1.Location = new System.Drawing.Point(273, 168);
             this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.Hover;
             this.materialRaisedButton1.Name = "materialRaisedButton1";
             this.materialRaisedButton1.Primary = true;
-            this.materialRaisedButton1.Size = new System.Drawing.Size(88, 30);
+            this.materialRaisedButton1.Size = new System.Drawing.Size(86, 36);
             this.materialRaisedButton1.TabIndex = 0;
-            this.materialRaisedButton1.Text = "Restore";
+            this.materialRaisedButton1.Text = "OK";
             this.materialRaisedButton1.UseVisualStyleBackColor = true;
             this.materialRaisedButton1.Click += new System.EventHandler(this.materialRaisedButton1_Click);
             // 
@@ -56,7 +58,7 @@
             this.RestoreTextBox.Depth = 0;
             this.RestoreTextBox.EnterToTab = false;
             this.RestoreTextBox.Hint = "";
-            this.RestoreTextBox.Location = new System.Drawing.Point(75, 101);
+            this.RestoreTextBox.Location = new System.Drawing.Point(91, 108);
             this.RestoreTextBox.MaxLength = 32767;
             this.RestoreTextBox.MouseState = MaterialSkin.MouseState.Hover;
             this.RestoreTextBox.Name = "RestoreTextBox";
@@ -74,22 +76,24 @@
             // HostLabel
             // 
             this.HostLabel.AutoSize = true;
-            this.HostLabel.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.HostLabel.Location = new System.Drawing.Point(59, 278);
+            this.HostLabel.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.HostLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
+            this.HostLabel.Location = new System.Drawing.Point(143, 274);
             this.HostLabel.Name = "HostLabel";
-            this.HostLabel.Size = new System.Drawing.Size(20, 23);
+            this.HostLabel.Size = new System.Drawing.Size(196, 28);
             this.HostLabel.TabIndex = 2;
-            this.HostLabel.Text = "1";
+            this.HostLabel.Text = "Restoration host name";
             // 
             // IpLabel
             // 
             this.IpLabel.AutoSize = true;
-            this.IpLabel.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.IpLabel.Location = new System.Drawing.Point(59, 327);
+            this.IpLabel.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.IpLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
+            this.IpLabel.Location = new System.Drawing.Point(143, 323);
             this.IpLabel.Name = "IpLabel";
-            this.IpLabel.Size = new System.Drawing.Size(20, 23);
+            this.IpLabel.Size = new System.Drawing.Size(193, 28);
             this.IpLabel.TabIndex = 3;
-            this.IpLabel.Text = "1";
+            this.IpLabel.Text = "IP for restoration host";
             // 
             // materialDivider1
             // 
@@ -124,8 +128,10 @@
             this.Controls.Add(this.HostLabel);
             this.Controls.Add(this.RestoreTextBox);
             this.Controls.Add(this.materialRaisedButton1);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Restoration";
-            this.Text = "Restoration";
+            this.Text = "Restoring";
             this.Load += new System.EventHandler(this.Restoration_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

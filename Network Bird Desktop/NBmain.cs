@@ -22,6 +22,9 @@ namespace Network_Bird_Desktop
     public partial class NBmain : MaterialSkin.Controls.MaterialForm
     {
         private Settings_NB sett;
+        private Restoration res;
+        private Registration reg;
+        private About ab;
         public string log;
         string pass;
         Image img1 = Image.FromFile(@"D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\Resources\white_settings.png");
@@ -90,7 +93,7 @@ namespace Network_Bird_Desktop
         }
         private void ExitChat()
         {
-            string message = userName + " leaves chat";
+            string message = userName + " leave from chat";
             byte[] data = Encoding.Unicode.GetBytes(message);
             client.Send(data, data.Length, HOST, REMOTEPORT);
             client.DropMulticastGroup(groupAddress);
@@ -113,9 +116,22 @@ namespace Network_Bird_Desktop
         }
 
         public void loginButton_Click_1(object sender, EventArgs e)
-        {   
+        {
+            if (materialCheckBox1.Checked == true)
+            {
+              
+                Properties.Settings.Default.chk = "+";
+                Properties.Settings.Default.log = userNameTextBox.Text;
+                Properties.Settings.Default.pass = PasswordTextBox.Text;
+                Properties.Settings.Default.Save();
+            }
+            else
+            {
+               
+                Properties.Settings.Default.lang_selector = "-";
+                Properties.Settings.Default.Save();
+            }
 
-        
 
             using (var connection = new OleDbConnection("Provider=" + "Microsoft.Jet.OLEDB.4.0;Data Source=" + Directory.GetCurrentDirectory() + "\\Data\\data.mdb"))
             {
@@ -165,18 +181,12 @@ namespace Network_Bird_Desktop
             try
             {
                 client = new UdpClient(LOCALPORT);
-                // присоединяемся к групповой рассылке
                 client.JoinMulticastGroup(groupAddress, TTL);
-
-                // запускаем задачу на прием сообщений
                 Task receiveTask = new Task(ReceiveMessages);
                 receiveTask.Start();
-
-                // отправляем первое сообщение о входе нового пользователя
                 string message = userName + " join";
                 byte[] data = Encoding.Unicode.GetBytes(message);
                 client.Send(data, data.Length, HOST, REMOTEPORT);
-
                 loginButton.Enabled = false;
                 logoutButton.Enabled = true;
                 sendButton.Enabled = true;
@@ -195,7 +205,12 @@ namespace Network_Bird_Desktop
 
         private void NBmain_Load(object sender, EventArgs e)
         {
-            sett = new Settings_NB();
+            if (Properties.Settings.Default.chk == "+")
+            {
+              userNameTextBox.Text = Properties.Settings.Default.log;
+              PasswordTextBox.Text = Properties.Settings.Default.pass;
+            }
+            
             bunifuFlatButton3.Enabled = false;
             materialDivider1.BackColor = Color.FromArgb(25, 118, 210);
             materialDivider2.BackColor = Color.FromArgb(25, 118, 210);
@@ -206,12 +221,15 @@ namespace Network_Bird_Desktop
             {
                 materialCheckBox1.Text = "Запам'ятати мене";
                 loginButton.Text = "Вхід";
-                materialLabel1.Text = "?Забули пароль";
-                materialLabel2.Text = "!Зареєструватись зараз";
-                bunifuFlatButton1.ButtonText = "Налаштування";
-                bunifuFlatButton2.ButtonText = "Про";
-                bunifuFlatButton3.ButtonText = "Вийти";
-                
+                label1.Text = "?Забули ваш пароль";
+                label2.Text = "!Зареєструватись зараз";
+                label2.Location = new Point(73, 293);
+                bunifuFlatButton1.ButtonText = "      Налаштування";
+                bunifuFlatButton2.ButtonText = "     Про програму";
+                bunifuFlatButton3.ButtonText = "         Вийти";
+                userNameTextBox.Hint = "введіть Ваш логін";
+                PasswordTextBox.Hint = "пароль Ваш пароль";
+               
             }
            
 
@@ -232,7 +250,6 @@ namespace Network_Bird_Desktop
                 messageTextBox.Location = new Point(51, 498);   
                 messageTextBox.Width = 720;
                 chatTextBox.Width = 797;
-         
                 animator1.ShowSync(panel1);
             }
             else
@@ -243,7 +260,6 @@ namespace Network_Bird_Desktop
                 messageTextBox.Location = new Point(284, 498);
                 messageTextBox.Width = 488;
                 chatTextBox.Width = 564;
-         
                 animator1.ShowSync(panel1);
             }
         }
@@ -285,6 +301,9 @@ namespace Network_Bird_Desktop
 
         private void materialLabel2_Click(object sender, EventArgs e)
         {
+
+            if (Application.OpenForms.OfType<Registration>().Count() == 1)
+                Application.OpenForms.OfType<Registration>().First().Close();
             Registration reg = new Registration();
             reg.Show();
         }
@@ -297,6 +316,8 @@ namespace Network_Bird_Desktop
 
         private void materialLabel1_Click(object sender, EventArgs e)
         {
+            if (Application.OpenForms.OfType<Restoration>().Count() == 1)
+                Application.OpenForms.OfType<Restoration>().First().Close();
             Restoration res = new Restoration();
             res.Show();
         }
@@ -318,8 +339,32 @@ namespace Network_Bird_Desktop
 
         private void bunifuFlatButton2_Click_2(object sender, EventArgs e)
         {
+            if (Application.OpenForms.OfType<About>().Count() == 1)
+                Application.OpenForms.OfType<About>().First().Close();
             About ab = new About();
             ab.Show();
+        }
+
+        private void materialLabel1_MouseHover(object sender, EventArgs e)
+        {
+            label1.ForeColor = Color.FromArgb(25, 118, 210);
+            label2.ForeColor = Color.FromArgb(25, 118, 210);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.OfType<Restoration>().Count() == 1)
+                Application.OpenForms.OfType<Restoration>().First().Close();
+            Restoration res = new Restoration();
+            res.Show();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.OfType<Registration>().Count() == 1)
+                Application.OpenForms.OfType<Registration>().First().Close();
+            Registration reg = new Registration();
+            reg.Show();
         }
     }
  }

@@ -30,6 +30,15 @@ namespace Network_Bird_Desktop
         private void About_Load(object sender, EventArgs e)
         {
             label1.ForeColor = Color.FromArgb(25, 118, 210);
+            if (Properties.Settings.Default.lang_selector == "ukr")
+            {
+                this.Text = "Про програму";
+            }
+        }
+
+        private void materialRaisedButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -28,14 +28,11 @@ namespace Network_Bird_Desktop
 
         private void Settings_Load(object sender, EventArgs e)
         {
-            eng_RB.Checked = true;
             if (Properties.Settings.Default.lang_selector == "ukr")
             {
-                ukr_RB.Checked = true;
-            }
-            else
-            {
-                eng_RB.Checked = true;
+                
+                this.Text = "Налаштування";
+                tabPage1.Text = "Мова";
             }
         }
 

@@ -39,6 +39,7 @@
             // materialRaisedButton1
             // 
             this.materialRaisedButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialRaisedButton1.Depth = 0;
             this.materialRaisedButton1.Icon = null;
             this.materialRaisedButton1.Location = new System.Drawing.Point(604, 198);
@@ -50,6 +51,7 @@
             this.materialRaisedButton1.TabIndex = 0;
             this.materialRaisedButton1.Text = "OK";
             this.materialRaisedButton1.UseVisualStyleBackColor = true;
+            this.materialRaisedButton1.Click += new System.EventHandler(this.materialRaisedButton1_Click);
             // 
             // label1
             // 
@@ -58,10 +60,10 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
             this.label1.Location = new System.Drawing.Point(8, 72);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(683, 23);
+            this.label1.Size = new System.Drawing.Size(787, 23);
             this.label1.TabIndex = 1;
-            this.label1.Text = ".This software was created for commercial companies and another faces, at the mom" +
-    "ent is fully free";
+            this.label1.Text = ".Це програмне забезпечення було створене для корпоративних підприємств і на даний" +
+    " момент є безкоштовним";
             // 
             // label2
             // 
@@ -70,9 +72,9 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
             this.label2.Location = new System.Drawing.Point(8, 119);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(481, 23);
+            this.label2.Size = new System.Drawing.Size(556, 23);
             this.label2.TabIndex = 2;
-            this.label2.Text = ".Also this project used by myself for successfully get my diploma paper";
+            this.label2.Text = ".Також цей проект використовувався мною для успішного отримання диплому";
             // 
             // label3
             // 
@@ -81,10 +83,10 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
             this.label3.Location = new System.Drawing.Point(12, 163);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(583, 23);
+            this.label3.Size = new System.Drawing.Size(690, 23);
             this.label3.TabIndex = 3;
-            this.label3.Text = ":I\'ll upgrade this product all the time, you can send me your propositions on my " +
-    "mail ";
+            this.label3.Text = ":Я буду покращувати Network bird, тому ти можеш запропонувати свої ідеї, надіслав" +
+    "ши їх сюди";
             // 
             // label4
             // 
@@ -101,7 +103,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(697, 253);
+            this.ClientSize = new System.Drawing.Size(799, 253);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);

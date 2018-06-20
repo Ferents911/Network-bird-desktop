@@ -20,6 +20,9 @@ namespace Network_Bird_Desktop
 {
     public partial class Restoration : MaterialSkin.Controls.MaterialForm
     {
+        string OutputText;
+        string nameHost = Dns.GetHostName();
+        string name;
         string path;
         string pass;
         public Restoration()
@@ -37,9 +40,17 @@ namespace Network_Bird_Desktop
 
         private void Restoration_Load(object sender, EventArgs e)
         {
-            RestoreTextBox.Hint = "Enter your e-mail for restore";
+            RestoreTextBox.Hint = "Enter your e-mail for restoring";
             materialDivider1.BackColor = Color.FromArgb(25, 118, 210);
             materialDivider2.BackColor = Color.FromArgb(25, 118, 210);
+            if (Properties.Settings.Default.lang_selector == "ukr")
+            {
+
+                this.Text = "Відновлення";
+                IpLabel.Text = "Поточна IP комп'ютера";
+                HostLabel.Text = "Ім'я комп'ютера";
+                RestoreTextBox.Hint = "введіть вашу електронну скриньку";
+            }
         }
 
         private void materialRaisedButton1_Click(object sender, EventArgs e)
@@ -49,7 +60,8 @@ namespace Network_Bird_Desktop
             {
                 connection.Open();
                 OleDbCommand command_1 = connection.CreateCommand();
-                
+                OleDbCommand command_2 = connection.CreateCommand();
+
 
                 command_1.CommandText = "SELECT User_pass FROM [Users] WHERE User_mail = '" + RestoreTextBox.Text + "';";
                 OleDbDataReader reader_1 = command_1.ExecuteReader();
@@ -58,7 +70,16 @@ namespace Network_Bird_Desktop
                   pass = reader_1[0].ToString();
 
                 }
-              
+
+                command_2.CommandText = "SELECT User_name FROM [Users] WHERE User_mail = '" + RestoreTextBox.Text + "';";
+                OleDbDataReader reader_2 = command_2.ExecuteReader();
+
+                while (reader_2.Read())
+                {
+                    name = reader_2[0].ToString();
+
+                }
+
                 if ((string.IsNullOrWhiteSpace(RestoreTextBox.Text)))
                 {
                     MessageBox.Show("One or more fields is empty, please enter the data", "Network bird", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -72,6 +93,7 @@ namespace Network_Bird_Desktop
                     else
                     {
                         MailSender();
+                        HostLabel.Text = nameHost;
                     }
                 }
                 reader_1.Close();
@@ -81,9 +103,8 @@ namespace Network_Bird_Desktop
 
         public void MailSender()
         {
-            string OutputText;
-            string name = Dns.GetHostName();
-            HostLabel.Text = name;
+           
+            HostLabel.Text = nameHost;
             IPAddress[] localIPs = Dns.GetHostAddresses(Dns.GetHostName());
             foreach (IPAddress addr in localIPs) // повторення вкладених операторів для кожного IP
             {
@@ -93,7 +114,7 @@ namespace Network_Bird_Desktop
                 }
             }
            
-                OutputText = HostLabel.Text + "\r\n" + IpLabel.Text + "\r\n" + "Dear, " + name +" your password is: " + pass; // формую вихідну текстову змінну для запису в текстовий файл на основі зібраної інформації.
+                OutputText ="Restoring host: " + HostLabel.Text + "\r\n" + "Restoring IP address: " + IpLabel.Text + "\r\n" + "Dear, " + name +" your password is: " + pass; // формую вихідну текстову змінну для запису в текстовий файл на основі зібраної інформації.
                 MailMessage mail = new MailMessage();
                 SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com"); // host
                 mail.From = new MailAddress("ferents911@gmail.com"); // from
@@ -101,7 +122,7 @@ namespace Network_Bird_Desktop
                 mail.Subject = "Restoring your password";
                 mail.Body = OutputText;
                 SmtpServer.Port = 587; // port
-                SmtpServer.Credentials = new NetworkCredential("ferents911@gmail.com", "kolyaferents619"); //personal data of your mailbox
+                SmtpServer.Credentials = new NetworkCredential("ferents911@gmail.com", "kolyaferents619"); 
                 SmtpServer.EnableSsl = true;
                 SmtpServer.Send(mail);
             }
