@@ -27,7 +27,6 @@ namespace Network_Bird_Desktop
         private About ab;
         public string log;
         string pass;
-        Image img1 = Image.FromFile(@"D:\coding\projects\С#\Windows\Network Bird Desktop\Network Bird Desktop\Resources\white_settings.png");
         bool alive = false; // будет ли работать поток для приема
         UdpClient client;
         const int LOCALPORT = 8001; // порт для приема сообщений

@@ -48,7 +48,7 @@
             this.loginButton = new MaterialSkin.Controls.MaterialRaisedButton();
             this.chatTextBox = new System.Windows.Forms.RichTextBox();
             this.messageTextBox = new System.Windows.Forms.RichTextBox();
-            this.animator1 = new BunifuAnimatorNS.Animator(this.components);
+            this.animator1 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.sendButton = new Bunifu.Framework.UI.BunifuFlatButton();
             this.dataSet1 = new System.Data.DataSet();
             this.panel1.SuspendLayout();
@@ -472,7 +472,7 @@
         private MaterialSkin.Controls.MaterialDivider materialDivider1;
         private MaterialSkin.Controls.MaterialCheckBox materialCheckBox1;
         private Bunifu.Framework.UI.BunifuFlatButton logoutButton;
-        private BunifuAnimatorNS.Animator animator1;
+        private BunifuAnimatorNS.BunifuTransition animator1;
         private MaterialSkin.Controls.MaterialDivider materialDivider2;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
