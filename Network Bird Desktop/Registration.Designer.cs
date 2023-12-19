@@ -44,9 +44,9 @@
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.animator1 = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.animator2 = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.animator3 = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.animator1 = new BunifuAnimatorNS.Animator(this.components);
+            this.animator2 = new BunifuAnimatorNS.Animator(this.components);
+            this.animator3 = new BunifuAnimatorNS.Animator(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -349,8 +349,8 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private BunifuAnimatorNS.BunifuTransition animator2;
-        private BunifuAnimatorNS.BunifuTransition animator1;
-        private BunifuAnimatorNS.BunifuTransition animator3;
+        private BunifuAnimatorNS.Animator animator2;
+        private BunifuAnimatorNS.Animator animator1;
+        private BunifuAnimatorNS.Animator animator3;
     }
 }
